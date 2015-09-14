@@ -1,0 +1,1 @@
+web: java -XX:+UseCompressedOops -jar target/classes:target/dependency/* HelloWorld
