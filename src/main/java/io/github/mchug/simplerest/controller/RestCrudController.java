@@ -13,13 +13,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Path("/rest")
-public class RestCrudController {
+public class RestCrudController
+{
 
     private final RestCrudService service = new RestCrudService();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll() {
+    public Response getAll()
+    {
         List<SimpleData> all = service.getAll();
 
         List<JSONObject> allJsonObjectList = all
@@ -34,7 +36,8 @@ public class RestCrudController {
 
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
-    public Response clear() {
+    public Response clear()
+    {
         List<SimpleData> allDeleted = service.clear();
 
         List<JSONObject> allDeletedJsonObjectList = allDeleted
